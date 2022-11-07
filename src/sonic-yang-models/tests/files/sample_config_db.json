@@ -138,7 +138,8 @@
         "VLAN_INTERFACE": {
             "Vlan111": {
                 "nat_zone": "0",
-                "loopback_action": "forward"
+                "loopback_action": "forward",
+                "static_anycast_gateway": "true"
             },
             "Vlan777": {},
             "Vlan111|2a04:5555:45:6709::1/64": {
@@ -1520,6 +1521,11 @@
                 "enabled": "true"
             }
         },
+        "SAG": {
+            "GLOBAL": {
+                "gateway_mac": "00:11:22:33:44:55"
+            }
+        },
         "FEATURE": {
             "bgp": {
                 "auto_restart": "enabled",
@@ -1606,6 +1612,11 @@
                 "rfc6939_support": "true"
             }
         },
+        "SAG": {
+            "GLOBAL": {
+                "gateway_mac": "00:11:22:33:44:55"
+            }
+        },
         "SCHEDULER": {
             "TEST@0": {
                 "cbs": "256",
@@ -1661,7 +1672,6 @@
                 "wred_red_enable": "true"
             }
         },
-
         "QUEUE": {
             "Ethernet0|0": {
                 "scheduler": "TEST@0",
